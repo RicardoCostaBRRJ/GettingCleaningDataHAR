@@ -53,38 +53,35 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 
 
-<div id="getting-and-cleaning-data-programming-assignment" class="section level2">
-<h2>Getting and Cleaning Data Programming Assignment</h2>
+<div id="getting-and-cleaning-data-programming-assignment---codebook" class="section level2">
+<h2>Getting and Cleaning Data Programming Assignment - Codebook</h2>
 <div id="description" class="section level3">
 <h3>Description</h3>
-<p>One of the most exciting areas in all of data science right now is wearable computing - see for example an article by [clicking here][<a href="http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand/">http://www.insideactivitytracking.com/data-science-activity-tracking-and-the-battle-for-the-worlds-top-sports-brand/</a>]. Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained by [clicking here][<a href="http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones">http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones</a>].</p>
-<p>The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. It generates tidy data sets as described below:</p>
-<ul>
-<li>Merges the training and the test sets to create one data set.</li>
-<li>Extracts only the measurements on the mean and standard deviation for each measurement.</li>
-<li>Uses descriptive activity names to name the activities in the data set</li>
-<li>Appropriately labels the data set with descriptive variable names.</li>
-<li>Creates a second, independent tidy data set with the average of each variable for each activity and each subject.</li>
-</ul>
+<p>The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data.</p>
+<p>The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain.</p>
 </div>
-<div id="environment-and-dataset" class="section level3">
-<h3>Environment and Dataset</h3>
-<p>The evironment used for this script is below:</p>
-<ul>
-<li>platform x86_64-apple-darwin10.8.0<br /></li>
-<li>arch x86_64<br /></li>
-<li>os darwin10.8.0<br /></li>
-<li>system x86_64, darwin10.8.0<br /></li>
-<li>major 3<br /></li>
-<li>minor 1.0<br /></li>
-<li>year 2014<br /></li>
-<li>month 04<br /></li>
-<li>day 10<br /></li>
-<li>svn rev 65387<br /></li>
-<li>language R<br /></li>
-<li>version.string R version 3.1.0 (2014-04-10)<br /></li>
-<li>nickname Spring Dance</li>
-</ul>
+<div id="required-packages-and-downloading-data" class="section level3">
+<h3>Required Packages and Downloading Data</h3>
+<p>For this script, there are two required packages to be loaded into your R environment: data.table-package {data.table} and reshape2-package {reshape2}. The following code tests if there is a need to download such packages:</p>
+<pre><code>## Loading required package: data.table
+## Required data.table package is already in place.
+## Loading required package: reshape2
+## Required reshape2 package is already in place.</code></pre>
+<p>The following code tests if the dataset was previously downloaded and unziped to the disk. If the unziped dataset is not detected, it tries to find the ziped dataset and unzip it right from the disk. If the ziped file and the dataset are not found, dataset is downloaded and unziped.</p>
+<pre><code>## Dataset is already in place.
+## All set. Moving forward with the script.</code></pre>
+</div>
+<div id="loading-and-merging-data" class="section level3">
+<h3>Loading and Merging Data</h3>
+<p>The following code reads two data files to populate tables with activities and features:</p>
+<pre><code>## Please wait while data is imported.
+## Activities imported.
+## Features imported.
+## All data was imported. Moving forward with the script.</code></pre>
+<p>Once loaded, these activities and features are prepared for further analysis. First, test data:</p>
+<p>Then, train data:</p>
+<p>The project aims to focus exclusively on the mean and standard deviation for each measurement. The following code accomplishes this goal, and saves a file called “tidyData.txt” with the results:</p>
+<p>As another goal for this project, the script will create a second, independent tidy data set with the average of each variable for each activity and each subject. The following code accomplishes this goal, and saves a file called “tidyAverageData.txt” with the results:</p>
 </div>
 </div>
 
