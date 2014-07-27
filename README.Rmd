@@ -17,7 +17,7 @@ The purpose of this project is to demonstrate your ability to collect, work with
 - Appropriately labels the data set with descriptive variable names. 
 - Creates a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
-### Environment and Dataset  
+### Environment 
 The evironment used for this script is below:  
 
 - platform       x86_64-apple-darwin10.8.0     
